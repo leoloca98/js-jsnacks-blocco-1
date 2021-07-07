@@ -17,7 +17,13 @@ fino a quando ne avrà tanti quanti l’altro.
 */
 
 var firstArray = ["Mascarpone", "Uova", "Zucchero", "Spritz"];
-var secondArray = ["Mascarpone", "Aperol", "ciao", "ciao"];
+var secondArray = ["Mascarpone", "Aperol"];
+var displayFirstArray = document.getElementById("Snack-firstA-4");
+var displaySecondArray = document.getElementById("Snack-secondA-4");
+var listItemsFirstArray = "";
+var listItemsSecondArray = "";
+var b = 0;
+var x = 0;
 
 if (firstArray.length > secondArray.length) {
     while (firstArray.length > secondArray.length) {
@@ -31,3 +37,17 @@ if (firstArray.length > secondArray.length) {
 
 console.table(firstArray);
 console.table(secondArray);
+
+displayFirstArray.innerText = "Prima Lista:";
+
+for (b = 0; b < firstArray.length; b++) {
+    listItemsFirstArray += "<li>" + firstArray[b] + "</li>";
+}
+displaySecondArray.innerText = "Seconda Lista:";
+
+for (x = 0; x < firstArray.length; x++) {
+    listItemsSecondArray += "<li>" + secondArray[x] + "</li>";
+}
+
+displayFirstArray.innerHTML = listItemsFirstArray;
+displaySecondArray.innerHTML = listItemsSecondArray;

@@ -19,6 +19,9 @@ Fin - Un array contente 3 invitati con nome+cognome casuali presi dagli array so
 var firstNames = ["Andrea", "Luigi", "Riccardo", "Luca", "Davide", "Giorgio"];
 var lastNames = ["Locatelli", "Ghisalberti", "Cavagna", "Esposito", "Chiesa", "Mancini"];
 var invitated = [];
+var displayTable = document.getElementById("Snack-table-3")
+var listItems = "";
+var a = 0;
 
 while (invitated.length < 3) {
     var randomNum1 = Math.floor(Math.random() * firstNames.length);
@@ -28,12 +31,18 @@ while (invitated.length < 3) {
     var randomLastName = lastNames[randomNum2];
 
     var fullName = randomFirstName + " " + randomLastName;
-    console.log("Nome: " + fullName);
+    console.log("Nome randomizzato: " + fullName);
 
     if (!invitated.includes(fullName)) {
-        console.log("Ho pushato: " + fullName);
+        console.log("Nome inserito: " + fullName);
         invitated.push(fullName);
     }
 }
 
 console.table(invitated);
+
+for (a = 0; a < invitated.length; a++) {
+    listItems += "<li>" + invitated[a] + "</li>";
+}
+
+displayTable.innerHTML = listItems;

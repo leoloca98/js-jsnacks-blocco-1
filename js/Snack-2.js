@@ -17,10 +17,19 @@ se è dispari stampa il numero successivo.
 */
 
 var userNum;
+var display = document.getElementById("Snack-2");
+
 do {
     userNum = parseInt(prompt("Inserisci un numero"));
 } while (isNaN(userNum))
 
 if (userNum % 2 === 0) { //*Se pari
     console.log(userNum);
-} else console.log(userNum + 1); //*Se dispari
+
+    display.innerText = "Il numero inserito è pari, quindi: " + userNum;
+}
+else {
+    console.log(userNum + 1); //*Se dispari
+
+    display.innerText = "Il numero inserito è dispari, quindi: " + (userNum + 1);
+}
