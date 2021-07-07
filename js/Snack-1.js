@@ -44,6 +44,7 @@ while (i <= 5) {
     sum += userNumbers;
     i++;
 }
+somma.innerText = "La somma dei numeri è: " + sum;
 console.log("La somma dei numeri è: " + sum);
 */
 
