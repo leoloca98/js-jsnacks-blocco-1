@@ -64,9 +64,10 @@ else {
 var firstNames = ["Andrea", "Luigi", "Riccardo", "Luca", "Davide", "Giorgio"];
 var lastNames = ["Locatelli", "Ghisalberti", "Cavagna", "Esposito", "Chiesa", "Mancini"];
 var invitated = [];
-var displayTable = document.getElementById("Snack-table-3")
+var displayTable = document.getElementById("Snack-Table-3");
+var displayTitle = document.getElementById("Snack-Title-3");
 var listItems = "";
-var a = 0,
+var a = 0;
 
 while (invitated.length < 3) {
     var randomNum1 = Math.floor(Math.random() * firstNames.length);
@@ -89,7 +90,7 @@ console.table(invitated);
 for (a = 0; a < invitated.length; a++) {
     listItems += "<li>" + invitated[a] + "</li>";
 }
-
+displayTitle.innerText = "La lista di invitati casuali è composta da:";
 displayTable.innerHTML = listItems;
 
 
