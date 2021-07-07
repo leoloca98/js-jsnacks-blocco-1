@@ -21,6 +21,7 @@ Esegui questo programma in due versioni, con il for e con il while.
 var i = 1;
 var userNumbers;
 var sum = 0;
+var somma = document.getElementById("Snack-sum-1");
 
 for (i = 1; i <= 5; i++) {
     userNumbers = parseInt(prompt("Inserisci un numero (" + i + "/5)"));
@@ -28,7 +29,7 @@ for (i = 1; i <= 5; i++) {
         sum += userNumbers;
     } else i--;
 }
-
+somma.innerText = "La somma dei numeri è: " + sum;
 console.log("La somma dei numeri è: " + sum);
 
 
